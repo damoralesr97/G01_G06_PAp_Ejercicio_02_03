@@ -9,15 +9,26 @@ package modelo;
  *
  * @author Usuario
  */
-public class Candidato {
+public class Dueño {
     
+    private int codigo;
     private String nombre;
     private String apellido;
-    private String codigo;
+    private String cedula;
 
-    public Candidato(String nombre, String apellido, String codigo) {
+    public Dueño(int codigo, String nombre, String apellido, String cedula) {
+        this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.cedula = cedula;
+    }
+
+    
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
@@ -37,24 +48,18 @@ public class Candidato {
         this.apellido = apellido;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public String getCedula() {
+        return cedula;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     @Override
     public String toString() {
-        return "Candidato{" + "nombre=" + nombre + ", apellido=" + apellido + ", codigo=" + codigo + '}';
+        return "Due\u00f1o{" + "codigo=" + codigo + ", nombre=" + nombre + ", apellido=" + apellido + ", cedula=" + cedula + '}';
     }
- 
-    
-    
-
- 
-    
     
     
     
