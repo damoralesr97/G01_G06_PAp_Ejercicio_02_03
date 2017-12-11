@@ -11,28 +11,18 @@ package modelo;
  */
 public class Resultado {
     
-    private Eleccion eleccion;
     private String codigo;
     private int numeroVotos;
     private int numeroVotosNulos;
     private int numeroVotosValidos;
     private int numeroVotosBlanco;
 
-    public Resultado(Eleccion eleccion, String codigo, int numeroVotos, int numeroVotosNulos, int numeroVotosValidos, int numeroVotosBlanco) {
-        this.eleccion = eleccion;
+    public Resultado(String codigo, int numeroVotos, int numeroVotosNulos, int numeroVotosValidos, int numeroVotosBlanco) {
         this.codigo = codigo;
         this.numeroVotos = numeroVotos;
         this.numeroVotosNulos = numeroVotosNulos;
         this.numeroVotosValidos = numeroVotosValidos;
         this.numeroVotosBlanco = numeroVotosBlanco;
-    }
-
-    public Eleccion getEleccion() {
-        return eleccion;
-    }
-
-    public void setEleccion(Eleccion eleccion) {
-        this.eleccion = eleccion;
     }
 
     public String getCodigo() {
@@ -74,11 +64,9 @@ public class Resultado {
     public void setNumeroVotosBlanco(int numeroVotosBlanco) {
         this.numeroVotosBlanco = numeroVotosBlanco;
     }
+    
+    
 
-    @Override
-    public String toString() {
-        return "Resultado{" + "eleccion=" + eleccion + ", codigo=" + codigo + ", numeroVotos=" + numeroVotos + ", numeroVotosNulos=" + numeroVotosNulos + ", numeroVotosValidos=" + numeroVotosValidos + ", numeroVotosBlanco=" + numeroVotosBlanco + '}';
-    }
     
     
     

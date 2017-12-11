@@ -14,13 +14,11 @@ public class Candidato {
     private String nombre;
     private String apellido;
     private String codigo;
-    private Eleccion eleccion;
 
-    public Candidato(String nombre, String apellido, String codigo, Eleccion eleccion) {
+    public Candidato(String nombre, String apellido, String codigo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.codigo = codigo;
-        this.eleccion = eleccion;
     }
 
     public String getNombre() {
@@ -47,20 +45,15 @@ public class Candidato {
         this.codigo = codigo;
     }
 
-    public Eleccion getEleccion() {
-        return eleccion;
-    }
-
-    public void setEleccion(Eleccion eleccion) {
-        this.eleccion = eleccion;
-    }
-
     @Override
     public String toString() {
-        return "Candidato{" + "nombre=" + nombre + ", apellido=" + apellido + ", codigo=" + codigo + ", eleccion=" + eleccion + '}';
+        return "Candidato{" + "nombre=" + nombre + ", apellido=" + apellido + ", codigo=" + codigo + '}';
     }
+ 
     
     
+
+ 
     
     
     

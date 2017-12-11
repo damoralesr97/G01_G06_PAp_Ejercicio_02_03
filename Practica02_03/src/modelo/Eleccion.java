@@ -14,11 +14,16 @@ public class Eleccion {
     private String fecha;
     private int numeroCandidatos;
     private String codigo;
+    private Candidato candidato;
+    private Resultado resultado;
+   
 
-    public Eleccion(String fecha, int NumeroCandidatos, String codigo) {
+    public Eleccion(String fecha, int numeroCandidatos, String codigo, Resultado resultado, Candidato candidato) {
         this.fecha = fecha;
-        this.numeroCandidatos = NumeroCandidatos;
+        this.numeroCandidatos = numeroCandidatos;
         this.codigo = codigo;
+        this.resultado = resultado;
+        this.candidato = candidato;
     }
 
     public String getFecha() {
@@ -33,8 +38,8 @@ public class Eleccion {
         return numeroCandidatos;
     }
 
-    public void setNumeroCandidatos(int NumeroCandidatos) {
-        this.numeroCandidatos = NumeroCandidatos;
+    public void setNumeroCandidatos(int numeroCandidatos) {
+        this.numeroCandidatos = numeroCandidatos;
     }
 
     public String getCodigo() {
@@ -45,12 +50,28 @@ public class Eleccion {
         this.codigo = codigo;
     }
 
+    public Resultado getResultado() {
+        return resultado;
+    }
+
+    public void setResultado(Resultado resultado) {
+        this.resultado = resultado;
+    }
+
+    public Candidato getCandidato() {
+        return candidato;
+    }
+
+    public void setCandidato(Candidato candidato) {
+        this.candidato = candidato;
+    }
+
     @Override
     public String toString() {
-        return "Eleccion{" + "fecha=" + fecha + ", NumeroCandidatos=" + numeroCandidatos + ", codigo=" + codigo + '}';
+        return "Eleccion{" + "fecha=" + fecha + ", numeroCandidatos=" + numeroCandidatos + ", codigo=" + codigo + ", resultado=" + resultado + ", candidato=" + candidato + '}';
     }
     
     
-    
+
     
 }
