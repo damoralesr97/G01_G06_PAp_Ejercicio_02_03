@@ -78,7 +78,7 @@ public class VentanaCasa extends JInternalFrame
         
         panelSup.add(this.etiList.get(3));
         panelSup.add(this.combo);
-        
+        //
         panelSup.add(this.etiList.get(4));
         panelSup.add(this.combo2);
         
