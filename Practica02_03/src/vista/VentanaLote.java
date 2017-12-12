@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.EventoVentanaLote;
 import controlador.GestionDato;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -42,7 +43,7 @@ public class VentanaLote extends JInternalFrame
     private JScrollPane scroll;
     
     public VentanaLote(GestionDato gD) {
-        super("Registrar Revista",true,true,true,true);
+        super("Registrar Lote",true,true,true,true);
         this.gD=gD;
         this.iniciaComponente();
         this.setSize(300, 300);
@@ -92,7 +93,7 @@ public class VentanaLote extends JInternalFrame
         this.scroll = new JScrollPane(tabla);
         this.panelPrincipal.add(this.scroll,BorderLayout.CENTER);
         
-       // this.boton.addActionListener(new EventoVentanaArticulo(this));
+        this.boton.addActionListener(new EventoVentanaLote(this));
         
         this.add(this.panelPrincipal);
         
@@ -107,7 +108,7 @@ public class VentanaLote extends JInternalFrame
                 retorno[i][0]=l.getCodigo();
                 retorno[i][1]=l.getArea();
                 retorno[i][2]=l.getPrecio();
-                retorno[i][3]=l.getUrbanizacion();
+                retorno[i][3]=l.getUrbanizacion().getNombre();
 
             i++;
             
@@ -124,4 +125,94 @@ public class VentanaLote extends JInternalFrame
         }
         return retorno;
     }
+
+    public List<JLabel> getEtiList() {
+        return etiList;
+    }
+
+    public void setEtiList(List<JLabel> etiList) {
+        this.etiList = etiList;
+    }
+
+    public List<JTextField> getTxtList() {
+        return txtList;
+    }
+
+    public void setTxtList(List<JTextField> txtList) {
+        this.txtList = txtList;
+    }
+
+    public JComboBox getCombo() {
+        return combo;
+    }
+
+    public void setCombo(JComboBox combo) {
+        this.combo = combo;
+    }
+
+    public JButton getBoton() {
+        return boton;
+    }
+
+    public void setBoton(JButton boton) {
+        this.boton = boton;
+    }
+
+    public JPanel getPanelPrincipal() {
+        return panelPrincipal;
+    }
+
+    public void setPanelPrincipal(JPanel panelPrincipal) {
+        this.panelPrincipal = panelPrincipal;
+    }
+
+    public GestionDato getgD() {
+        return gD;
+    }
+
+    public void setgD(GestionDato gD) {
+        this.gD = gD;
+    }
+
+    public Object[][] getDatos() {
+        return datos;
+    }
+
+    public void setDatos(Object[][] datos) {
+        this.datos = datos;
+    }
+
+    public Object[] getEncabezado() {
+        return encabezado;
+    }
+
+    public void setEncabezado(Object[] encabezado) {
+        this.encabezado = encabezado;
+    }
+
+    public DefaultTableModel getModeloTabla() {
+        return modeloTabla;
+    }
+
+    public void setModeloTabla(DefaultTableModel modeloTabla) {
+        this.modeloTabla = modeloTabla;
+    }
+
+    public JTable getTabla() {
+        return tabla;
+    }
+
+    public void setTabla(JTable tabla) {
+        this.tabla = tabla;
+    }
+
+    public JScrollPane getScroll() {
+        return scroll;
+    }
+
+    public void setScroll(JScrollPane scroll) {
+        this.scroll = scroll;
+    }
+    
+    
 }

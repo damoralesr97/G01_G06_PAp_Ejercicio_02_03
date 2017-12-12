@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.EventoVentanaUrbanizacion;
 import controlador.GestionDato;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -91,7 +92,7 @@ public class VentanaUrbanizacion extends JInternalFrame{
         this.panelPrincipal.add(this.scroll,BorderLayout.CENTER);
         
         
-      //  this.boton.addActionListener(new EventoVentanaAutor(this));
+        this.boton.addActionListener(new EventoVentanaUrbanizacion(this));
         
         this.add(this.panelPrincipal);
         

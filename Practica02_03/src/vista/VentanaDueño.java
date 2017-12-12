@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.EventoVentanaDueño;
 import controlador.GestionDato;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -50,7 +51,7 @@ public class VentanaDueño extends JInternalFrame
         this.etiList = new ArrayList<JLabel>();
         this.etiList.add(new JLabel("Codigo"));
         this.etiList.add(new JLabel("Nombre"));
-         this.etiList.add(new JLabel("Apellido"));
+        this.etiList.add(new JLabel("Apellido"));
         this.etiList.add(new JLabel("Cedula"));
  
         
@@ -92,7 +93,7 @@ public class VentanaDueño extends JInternalFrame
         this.panelPrincipal.add(this.scroll,BorderLayout.CENTER);
         
         
-      //  this.boton.addActionListener(new EventoVentanaAutor(this));
+        this.boton.addActionListener(new EventoVentanaDueño(this));
         
         this.add(this.panelPrincipal);
         
