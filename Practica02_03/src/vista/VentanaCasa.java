@@ -116,7 +116,7 @@ public class VentanaCasa extends JInternalFrame
                 retorno[i][0]=c.getCodigo();
                 retorno[i][1]=c.getNumeroCasa();
                 retorno[i][2]=c.getTelefono();
-                retorno[i][3]=c.getLote();
+                retorno[i][3]=c.getLote().getCodigo()+" "+c.getLote().getUrbanizacion().getNombre();
                 retorno[i][4]=c.getDueño().getNombre()+" "+c.getDueño().getApellido();
 
             i++;
